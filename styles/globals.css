@@ -1,3 +1,7 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -6,11 +10,16 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::-webkit-scrollbar{
+  width: 5px;
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: rgb(191, 47, 0);
 }
+
+/* ::-webkit-scrollbar-track{
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0,0,0, 0.25);
+} */

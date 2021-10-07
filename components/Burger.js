@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Burger({handleClick}) {
     return (
       <>
-        <div className="flex-col shadow-2xl min-h-screen bg-white py-8 lg:py-20  px-8  sm:max-w-lg flex-grow">
+        <div className="flex-col shadow-2xl min-h-screen bg-white p-4  sm:max-w-lg flex-grow">
           <div className="flex justify-between pb-8 border-b">
             <Link href="/search">
               <a>
@@ -34,8 +34,8 @@ export default function Burger({handleClick}) {
             </div>
           </div>
           {/* Links */}
-          <div className="flex-col font-semibold text-xl pt-8">
-            <div className="py-2 sm:py-4 lg:py-8">
+          <div className="flex-col font-semibold text-xl pt-4">
+            <div className="py-2 sm:py-4">
               <div>
                 <Link href="/">
                   <a className="hover:text-red-600">News</a>
@@ -62,7 +62,7 @@ export default function Burger({handleClick}) {
                 </Link>
               </div>
             </div>
-            <div className="py-2 sm:py-4 lg:py-8">
+            <div className="py-2 sm:py-4">
               <div>
                 <Link href="/student-work">
                   <a className="hover:text-red-600">Student Work</a>
@@ -84,7 +84,7 @@ export default function Burger({handleClick}) {
                 </Link>
               </div>
             </div>
-            <div className="py-2 sm:py-4 lg:py-8">
+            <div className="py-2 sm:py-4">
               <div>
                 <Link href="/about">
                   <a className="hover:text-red-600">About</a>

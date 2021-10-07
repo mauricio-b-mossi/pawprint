@@ -5,8 +5,8 @@ export default function SmallNewsBox({ post }) {
   const {publishedAt, title} = post;
 
   return (
-    <div className="">
-      <div className="border-t flex-col py-4">
+  
+      <div className="border-t max-w-xs md:max-w-none flex-col py-4">
         <div className="grid grid-cols-3 justify-between">
           <div className="uppercase text-gray-400 font-serif">
             {publishedAt.substring(5, 10).replace("-", ".")}
@@ -19,6 +19,5 @@ export default function SmallNewsBox({ post }) {
           </div>
         </div>
       </div>
-    </div>
   );
 }

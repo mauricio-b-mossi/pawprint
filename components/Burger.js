@@ -4,7 +4,7 @@ import Cancel from "../public/cancel.svg";
 import Logo from "../public/pawprint.png";
 import Search from "../public/searchIcon.svg";
 import { motion } from "framer-motion";
-import Link from 'next/link';
+import Link from "next/link";
 
 
 export default function Burger({handleClick}) {
@@ -12,9 +12,16 @@ export default function Burger({handleClick}) {
       <>
         <div className="flex-col shadow-2xl min-h-screen bg-white py-8 lg:py-20  px-8  sm:max-w-lg flex-grow">
           <div className="flex justify-between pb-8 border-b">
-            <div>
-              <Image src={Search} width={30} height={30} />
-            </div>
+            <Link href="/search">
+              <a>
+                <Image
+                  className="cursor-pointer"
+                  src={Search}
+                  width={30}
+                  height={30}
+                />
+              </a>
+            </Link>
             <Image src={Logo} width={150} height={75} />
             <div>
               <Image
@@ -30,67 +37,72 @@ export default function Burger({handleClick}) {
           <div className="flex-col font-semibold text-xl pt-8">
             <div className="py-2 sm:py-4 lg:py-8">
               <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Subscribe</a>
+                <Link href="/">
+                  <a className="hover:text-red-600">News</a>
                 </Link>
               </div>
               <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Back Issues</a>
+                <Link href="/arts">
+                  <a className="hover:text-red-600">Arts</a>
                 </Link>
               </div>
               <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Donate</a>
+                <Link href="/sports">
+                  <a className="hover:text-red-600">Sports</a>
                 </Link>
               </div>
               <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Store</a>
+                <Link href="/pop-culture">
+                  <a className="hover:text-red-600">Pop culture</a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/food-and-travel">
+                  <a className="hover:text-red-600">Food and Travel</a>
+                </Link>
+              </div>
+            </div>
+            <div className="py-2 sm:py-4 lg:py-8">
+              <div>
+                <Link href="/student-work">
+                  <a className="hover:text-red-600">Student Work</a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/get-to-know-abc">
+                  <a className="hover:text-red-600">Get to Know ABC</a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/community-updates">
+                  <a className="hover:text-red-600">Community updates</a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/special-editions">
+                  <a className="hover:text-red-600">Special Editions</a>
                 </Link>
               </div>
             </div>
             <div className="py-2 sm:py-4 lg:py-8">
               <div>
                 <Link href="/about">
-                  <a className="hover:text-red-600">Subscribe</a>
+                  <a className="hover:text-red-600">About</a>
                 </Link>
               </div>
               <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Back Issues</a>
+                <Link href="/contact-us">
+                  <a className="hover:text-red-600">Contact us</a>
                 </Link>
               </div>
               <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Donate</a>
+                <Link href="/get-involved">
+                  <a className="hover:text-red-600">Get involved</a>
                 </Link>
               </div>
               <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Store</a>
-                </Link>
-              </div>
-            </div>
-            <div className="py-2 sm:py-4 lg:py-8">
-              <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Subscribe</a>
-                </Link>
-              </div>
-              <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Back Issues</a>
-                </Link>
-              </div>
-              <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Donate</a>
-                </Link>
-              </div>
-              <div>
-                <Link href="/about">
-                  <a className="hover:text-red-600">Store</a>
+                <Link href="/meet-the-team">
+                  <a className="hover:text-red-600">Meet the team</a>
                 </Link>
               </div>
             </div>

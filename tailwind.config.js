@@ -6,6 +6,12 @@ module.exports = {
       gridTemplateRows: {
         // Simple 8 row grid
         '8': 'repeat(8, minmax(0, 1fr))',
+      },
+      width: {
+        '2xl': '42rem',
+        'xl': '36rem',
+        'lg': '32rem',
+        'md': '28'
       }
     },
   },

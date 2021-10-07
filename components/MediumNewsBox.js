@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import MadTrump from "../public/madTrump.jpg";
 import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";
 

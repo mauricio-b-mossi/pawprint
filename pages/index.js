@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import NewsGallery from '../components/NewsGallery'
 import NavBar from '../components/NavBar'
 import { sanityClient } from "../sanity";
+import Section from '../components/Section'
 
 export default function Home({ posts }) {
   console.log("====================================");
@@ -13,7 +14,8 @@ export default function Home({ posts }) {
   return (
     <div>
       <NavBar />
-      <NewsGallery post={ posts }/>
+      <NewsGallery post={posts} />
+      <Section />
     </div>
   );
 }

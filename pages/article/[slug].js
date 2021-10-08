@@ -68,11 +68,11 @@ export default function Slug({ post }) {
           </div>
         </div>
         {/* Article */}
-        <div className="prose mx-auto">
+        <div className="prose mx-auto break-words">
           <BlockContent
             blocks={body}
             serializers={serializers}
-            imageOptions={{fit: "max" }}
+            imageOptions={{ fit: "max" }}
             projectId={sanityClient.clientConfig.projectId}
             dataset={sanityClient.clientConfig.dataset}
           />

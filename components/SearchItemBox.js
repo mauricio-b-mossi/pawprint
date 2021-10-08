@@ -3,6 +3,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";
 import Image from "next/image";
 import MadTrump from "../public/madTrump.jpg";
+import Link from 'next/link';
 
 export default function SearchItemBox({ post }) {
     const { title, category, publishedAt, description, mainImage, slug } = post;
@@ -20,7 +21,11 @@ export default function SearchItemBox({ post }) {
           </p>
         </div>
         <div className="font-semibold font-serif text-lg sm:text-2xl flex justify-start items-center hover:text-red-600">
-          <h1>{title}</h1>
+          <Link href={"/article/" + slug.current}>
+            <a>
+              <h1>{title}</h1>
+            </a>
+          </Link>
         </div>
         <div>
           <p className="text-sm sm:text-base">
@@ -29,11 +34,15 @@ export default function SearchItemBox({ post }) {
         </div>
       </div>
       <div className="block my-auto">
-        <Image
-          {...imageProps}
-          layout="responsive"
-          sizes="(max-width: 800px) 100vw, 800px"
-        />
+        <Link href={"/article/" + slug.current}>
+          <a>
+            <Image
+              {...imageProps}
+              layout="responsive"
+              sizes="(max-width: 800px) 100vw, 800px"
+            />
+          </a>
+        </Link>
       </div>
     </div>
   );

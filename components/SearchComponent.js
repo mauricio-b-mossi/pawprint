@@ -21,17 +21,17 @@ export default function SearchComponent({ postList }) {
   }, [search])
 
   return (
-    <div className="grid gap-4 justify-center items-center">
-      <div className="w-screen sm:w-auto py-8">
+    <div className="grid gap-4 justify-center items-center p-4">
+      <div className="w-full sm:w-auto py-8">
         <input
-          className="border-2 border-gray-400 py-2 px-4 w-full  md:w-2xl"
+          className="border-2 border-gray-400 py-2 px-4 w-full lg:w-2xl"
           type="text"
           placeholder="Search"
           onChange={handleChange}
         />
       </div>
       {isNull ? (
-        <div className="block md:px-60">
+        <div className="block md:w-lg lg:w-auto lg:px-60">
           <Image
             src={NoResult}
             layout="responsive"

@@ -35,7 +35,7 @@ export default function NewsGallery({ post }) {
 
         <div className="col-span-3 xl:order-first xl:col-span-1 h-full xl:flex">
           <div className="flex  justify-center items-center lg:justify-self-auto  lg:items-stretch  ">
-            <div className="grid xl:grid-cols-1 gap-8 justify-center items-center max-w-lg ">
+            <div className="grid xl:grid-cols-1 gap-8 xl:gap-0 justify-center items-center max-w-lg ">
               {smallNewsBox.map((post, key) => (
                 <SmallNewsBox key={key} post={post} />
               ))}

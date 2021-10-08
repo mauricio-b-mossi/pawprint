@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function Header({handleClick}) {
   return (
-    <div className="border-b">
+    <div className="border-b shadow-2xl">
       {/* MAIN HEADER */}
       <div className="grid grid-cols-3 align-center justify-between p-4">
         <div className="grid grid-cols-2 gap-10 mx-auto">

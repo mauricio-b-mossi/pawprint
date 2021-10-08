@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";
+import Link from "next/link";
 
 export default function MediumNewsBox({ post }) {
 
@@ -12,13 +13,21 @@ export default function MediumNewsBox({ post }) {
   return (
     <div className="col-span-3 md:col-span-1 px-2">
       <div className="grid gap-3">
-        <Image
-          {...imageProps}
-          layout="responsive"
-          sizes="(max-width: 800px) 100vw, 800px"
-        />
+        <Link href={"/article/" + slug.current}>
+          <a>
+            <Image
+              {...imageProps}
+              layout="responsive"
+              sizes="(max-width: 800px) 100vw, 800px"
+            />
+          </a>
+        </Link>
         <div className="font-semibold font-serif text-2xl flex justify-start items-center hover:text-red-600">
-          <h1>{title}</h1>
+          <Link href={"/article/" + slug.current}>
+            <a>
+              <h1>{title}</h1>
+            </a>
+          </Link>
         </div>
         <div className="grid grid-cols-3 justify-between">
           <div className="uppercase text-gray-400 font-serif">

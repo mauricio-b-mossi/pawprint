@@ -13,7 +13,7 @@ export default function Burger({handleClick}) {
         <div className="flex-col shadow-2xl min-h-screen bg-white p-4  sm:max-w-lg flex-grow">
           <div className="flex justify-between pb-8 border-b">
             <Link href="/search">
-              <a>
+              <a className="my-auto">
                 <Image
                   className="cursor-pointer"
                   src={Search}
@@ -23,7 +23,7 @@ export default function Burger({handleClick}) {
               </a>
             </Link>
             <Image src={Logo} width={150} height={75} />
-            <div>
+            <div className="my-auto">
               <Image
                 onClick={handleClick}
                 className="cursor-pointer"

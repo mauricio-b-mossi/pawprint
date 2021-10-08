@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import NewsGallery from '../components/NewsGallery'
-import NavBar from '../components/NavBar'
+import NavBar from "../components/NavBar";
 import { sanityClient } from "../sanity";
 import Section from '../components/Section'
 
@@ -15,7 +15,6 @@ export default function Home({ posts }) {
     <div>
       <NavBar />
       <NewsGallery post={posts} />
-      <Section />
     </div>
   );
 }

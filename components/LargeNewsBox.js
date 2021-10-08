@@ -33,7 +33,14 @@ export default function LargeNewsBox({ post }) {
           </div>
           {/* New grid */}
           <div className="grid col-span-2 md:col-span-1 xl:col-span-3 lg:col-span-2 lg:grid-cols-2">
-            <div className="flex justify-center items-center  pt-4">
+            <div className="lg:hidden capitalize flex items-center w-full font-semibold font-serif col-span-3 text-2xl lg:text-3xl xl:text-4xl  hover:text-red-600 lg:py-4">
+              <Link href={"/article/" + slug.current}>
+                <a>
+                  <h1>{title}</h1>
+                </a>
+              </Link>
+            </div>
+            <div className=" hidden lg:flex justify-center items-center  pt-4">
               <p>{description}</p>
             </div>
             <div className="lg:border-l  px-0 lg:px-4 col-span-1">
@@ -44,7 +51,10 @@ export default function LargeNewsBox({ post }) {
                 <div className="col-span-2 transition-all ease-in-out hover:opacity-50">
                   <p>Mauricio Mossi</p>
                 </div>
-                <div className="capitalize  font-semibold font-serif col-span-3 text-2xl lg:text-3xl xl:text-4xl  hover:text-red-600 py-4">
+                <div className="lg:hidden flex justify-center items-center  pt-4 col-span-3">
+              <p>{description}</p>
+            </div>
+                <div className="hidden lg:flex capitalize  font-semibold font-serif col-span-3 text-2xl lg:text-3xl xl:text-4xl  hover:text-red-600 py-4">
                   <Link href={"/article/" + slug.current}>
                     <a>
                       <h1>{title}</h1>

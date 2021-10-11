@@ -1,5 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from 'next/image'
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,9 +11,11 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
-export default function SwiperComponent({list}) {
+export default function SwiperComponent({ images }) {
+  
+
     return (
-      <div className="canvas">
+      <div className="canvas ">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -25,7 +29,7 @@ export default function SwiperComponent({list}) {
           navigation={true}
           className="mySwiper"
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
+          {/* <SwiperSlide>Slide 1</SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
           <SwiperSlide>Slide 3</SwiperSlide>
           <SwiperSlide>Slide 4</SwiperSlide>
@@ -33,20 +37,25 @@ export default function SwiperComponent({list}) {
           <SwiperSlide>Slide 6</SwiperSlide>
           <SwiperSlide>Slide 7</SwiperSlide>
           <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide> */}
 
-          {/* {list &&
-            list.map((img, index) => (
+          {images &&
+            images.map((img, index) => (
               <SwiperSlide key={index}>
                 <Image
                   src={img.asset.url}
                   alt="Art Image"
-                  width="900"
-                  height="900"
+                  layout="fill"
                   key={img.asset._id}
                 />
+                {/* <div className=" z-10 text-white max-w-lg">
+                  <h1 className="text-8xl">{title}.</h1>
+                  <div>
+                    <p className="text-4xl">{description}</p>
+                  </div>
+                </div> */}
               </SwiperSlide>
-            ))} */}
+            ))}
         </Swiper>
       </div>
     );

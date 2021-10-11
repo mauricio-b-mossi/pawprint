@@ -22,7 +22,11 @@ export default function Burger({handleClick}) {
                 />
               </a>
             </Link>
-            <Image src={Logo} width={150} height={75} />
+            <Link href="/">
+              <a>
+                <Image src={Logo} width={150} height={75} />
+              </a>
+            </Link>
             <div className="my-auto">
               <Image
                 onClick={handleClick}

@@ -30,7 +30,11 @@ export default function Header({handleClick}) {
           </Link>
         </div>
         <div className="flex justify-center items-center">
-          <Image src={Logo} width={200} height={100} />
+          <Link href="/">
+            <a>
+              <Image src={Logo} width={200} height={100} />
+            </a>
+          </Link>
         </div>
       </div>
 

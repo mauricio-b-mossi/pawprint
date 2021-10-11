@@ -10,7 +10,7 @@ export default function getInvolved() {
       <div>
         <NavBar />
         <div id="sectionWavesRed">
-          <div className="min-h-screen flex md:grid md:grid-cols-2 justify-center items-center sm:bg-red-600">
+          <div className="min-h-screen flex md:grid md:grid-cols-2 justify-center items-center">
             <div className="flex flex-col  text-white h-full justify-center mx-auto">
               <div className="text-5xl lg:text-7xl 2xl:text-9xl font-bold text-white">
                 Get involved

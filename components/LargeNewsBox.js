@@ -48,12 +48,16 @@ export default function LargeNewsBox({ post }) {
                 <div className="uppercase text-gray-400 font-serif ">
                   {publishedAt.substring(5, 10).replace("-", ".")}
                 </div>
-                <div className="col-span-2 transition-all ease-in-out hover:opacity-50">
-                  <p>Mauricio Mossi</p>
+                <div className="col-span-2 transition-all ease-in-out hover:underline">
+                  <Link href={"/member/" + author.slug.current}>
+                    <a>
+                      <p>{author.name}</p>
+                    </a>
+                  </Link>
                 </div>
                 <div className="lg:hidden flex justify-center items-center  pt-4 col-span-3">
-              <p>{description}</p>
-            </div>
+                  <p>{description}</p>
+                </div>
                 <div className="hidden lg:flex capitalize  font-semibold font-serif col-span-3 text-2xl lg:text-3xl xl:text-4xl  hover:text-red-600 py-4">
                   <Link href={"/article/" + slug.current}>
                     <a>
@@ -64,27 +68,6 @@ export default function LargeNewsBox({ post }) {
               </div>
             </div>
           </div>
-
-          {/* <div className="flex justify-center  text-center">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
-            corrupti deserunt magni minus odit nihil, est harum nam porro et
-            debitis laudantium exercitationem ratione velit omnis dolores, qui
-            culpa tempore.
-          </div>
-          <s className="border-l  px-4">
-            <div className="grid grid-cols-3 justify-between">
-              <div className="">10.04</div>
-              <div className="col-span-2 transition-all ease-in-out hover:opacity-50">
-                Mauricio Mossi
-              </div>
-              <div className="flex justify-center items-center col-span-3 pt-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                sapiente illo porro explicabo deserunt nemo, quisquam maiores
-                animi alias eos distinctio ex esse facilis quas ipsum sed
-                recusandae pariatur maxime!
-              </div>
-            </div>
-          </s> */}
         </div>
       </div>
     );

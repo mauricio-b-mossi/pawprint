@@ -26,6 +26,7 @@ export const getServerSideProps = async ({ params }) => {
     title,
     categories,
     publishedAt,
+     "category": categories[]->title[0],
      "author": author->{name, slug},
     mainImage{
                     asset->{

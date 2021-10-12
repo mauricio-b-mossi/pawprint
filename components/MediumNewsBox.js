@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function MediumNewsBox({ post }) {
 
-  const { title, categories, mainImage, publishedAt, author, slug, description } = post;
+  const { title, category, mainImage, publishedAt, author, slug, description } = post;
 
   const imageProps = useNextSanityImage(sanityClient, mainImage);
   
@@ -30,7 +30,15 @@ export default function MediumNewsBox({ post }) {
           </Link>
         </div>
         <div className="grid grid-cols-3 justify-between">
-          <div className="uppercase text-gray-400 font-serif">
+          <div className=" text-sm grid grid-cols-2 gap-2 items-center">
+            <p className="text-blue-700 font-sans uppercase font-semibold">
+              {category}
+              <span className="uppercase text-gray-400 font-serif text-sm sm:text-base ml-2">
+                {publishedAt.substring(5, 10).replace("-", ".")}
+              </span>
+            </p>
+          </div>
+          {/* <div className="uppercase text-gray-400 font-serif">
             {publishedAt.substring(5, 10).replace("-", ".")}
           </div>
           <div className="col-span-2 transition-all ease-in-out hover:underline">
@@ -39,9 +47,11 @@ export default function MediumNewsBox({ post }) {
                 <p>{author.name}</p>
               </a>
             </Link>
-          </div>
+          </div> */}
           <div className="flex justify-center items-center col-span-3 pt-4">
-            <p>{description}</p>
+            <p className="text-sm sm:text-base">
+              {description.substring(0, 130)}...
+            </p>
           </div>
         </div>
       </div>

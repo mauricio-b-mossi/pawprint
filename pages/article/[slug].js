@@ -7,9 +7,10 @@ import Share from "../../public/shareIcon.svg";
 import Email from "../../public/emailIcon.svg";
 import { useNextSanityImage } from "next-sanity-image";
 import BlockContent from "@sanity/block-content-to-react";
+import Link from 'next/link'
 
 export default function Slug({ post }) {
-  const { title, category, mainImage, publishedAt, author, description, body } =
+  const { title, category, mainImage, publishedAt, author, description, body} =
     post;
 
   const serializers = {
@@ -53,7 +54,11 @@ export default function Slug({ post }) {
             <div className="uppercase my-4 md:text-xl">
               <h8>By</h8>
               <br />
-              <h8>{author.name}</h8>
+              <Link href={"/member/" + author.slug.current}>
+                <a>
+                  <h8 className='hover:underline'>{author.name}</h8>
+                </a>
+              </Link>
             </div>
             <div>
               <p className="text-base my-4 md:text-lg">{description}</p>

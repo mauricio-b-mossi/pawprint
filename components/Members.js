@@ -2,12 +2,15 @@ import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Content from './Content';
+import Link from 'next/link'
 
 
 
 const Members = ({ member }) => {
 
-  const {name, position, biography, mainImage} = member
+  const { position, author } = member
+  
+  const {name, bio, image, slug} = author
     
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +31,7 @@ const Members = ({ member }) => {
           <div className="w-40 h-40 md:w-52 md:h-52">
             <Image
               className="rounded-full"
-              src={mainImage.asset.url}
+              src={image.asset.url}
               alt=""
               width="300"
               height="300"
@@ -38,11 +41,14 @@ const Members = ({ member }) => {
           {/* TODO: Add this "md:hidden" to make responsive again */}
           <AnimatePresence>
             <div className="block p-2">
-              {isOpen && <Content text={biography} />}
+              {isOpen && <Content text={bio} />}
             </div>
           </AnimatePresence>
-
-          <h1 className="font-black pt-3">{name}</h1>
+          <Link href={"/" + slug}>
+            <a>
+              <h1 className="font-black pt-3 hover:underline">{name}</h1>
+            </a>
+          </Link>
           <h3 className="font-light">{position}</h3>
         </div>
         {/* TODO: HIDDING TO THE SIDE OPEN */}

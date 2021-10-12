@@ -32,16 +32,10 @@ export default function meetTheTeam({members}) {
 }
 
 export const getServerSideProps = async ({ params }) => {
-  const membersQuery = `*[_type == "members"]| order(order){
-    name,
+  const membersQuery = `*[_type == "members"] | order(order){
+  "author": author->{name, slug, image{asset->{url}}, bio},
     position,
-    biography,
-    mainImage{
-                    asset->{
-                        _id,
-                        url
-                    }
-                },
+    
   }`;
   const members = await sanityClient.fetch(membersQuery);
 

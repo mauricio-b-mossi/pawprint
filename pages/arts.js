@@ -9,9 +9,9 @@ export default function Arts({ posts }) {
   const { title, description, images } = posts
 
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <NavBar />
-      <Swiper images={ images }/>
+      
     </div>
   );
 }

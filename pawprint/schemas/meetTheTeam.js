@@ -10,27 +10,15 @@ export default {
       type: "number",
     },
     {
-      name: "name",
-      title: "Name",
-      type: "string",
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: { type: "author" },
     },
     {
       name: "position",
       title: "Position",
       type: "string",
-    },
-    {
-      name: "biography",
-      title: "Biography",
-      type: "text",
-    },
-    {
-      name: "mainImage",
-      title: "Main Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
     },
   ],
 };

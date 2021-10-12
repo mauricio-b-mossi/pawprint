@@ -6,11 +6,13 @@ import MadTrump from "../public/madTrump.jpg";
 import Link from 'next/link';
 
 export default function SearchItemBox({ post }) {
-    const { title, category, publishedAt, description, mainImage, slug } = post;
+  const { title, category, publishedAt, description, mainImage, slug } = post;
+  
+  // const category = categories[0]
 
   const imageProps = useNextSanityImage(sanityClient, mainImage);
   return (
-    <div className="grid grid-cols-3   sm:h-auto max-w-2xl gap-4 border-t border-b py-4">
+    <div className="grid grid-cols-3   sm:h-auto max-w-2xl gap-4 border-t border-b py-4 bg-white">
       <div className="col-span-2 grid">
         <div className=" text-sm grid grid-cols-2 gap-2 items-center">
           <p className="text-blue-700 font-sans uppercase font-semibold">

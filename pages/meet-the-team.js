@@ -5,7 +5,8 @@ import Members from '../components/Members'
 import { sanityClient } from "../sanity";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
-export default function meetTheTeam({members}) {
+export default function meetTheTeam({ members }) {
+  // console.log(members);
   return (
     <div>
       <NavBar />
@@ -15,7 +16,8 @@ export default function meetTheTeam({members}) {
           <AnimateSharedLayout>
             <motion.div
                           layout
-                          className="grid lg:grid-cols-2 xl:grid-cols-3 h-full flex-grow lg:pt-20"
+                          className="grid lg:grid-cols-2 xl:grid-cols-3 h-full flex-grow "
+              // className="flex justify-center"
             >
               {members &&
                 members.map((member, index) => (

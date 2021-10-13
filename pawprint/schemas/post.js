@@ -15,6 +15,21 @@ export default {
       ],
     },
     {
+      name: "subject",
+      title: "Subject",
+      type: "string",
+      options: {
+        list: [
+          { title: "News", value: "news" },
+          { title: "Arts", value: "arts" },
+          { title: "Sports", value: "sports" },
+          { title: "Pop culture", value: "pop" },
+          { title: "Food and Travel", value: "food" },
+        ],
+        layout: "radio",
+      },
+    },
+    {
       name: "description",
       title: "Description",
       type: "text",

@@ -11,7 +11,7 @@ export default function Arts({ posts }) {
   return (
     <div>
       <NavBar />
-      
+      <Swiper images={ images }/>
     </div>
   );
 }

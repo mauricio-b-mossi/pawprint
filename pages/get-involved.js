@@ -3,14 +3,18 @@ import NavBar from "../components/NavBar";
 import Image from "next/image";
 import GetInvolved from "../public/getInvolved.gif";
 import Link from "next/link";
+import { sanityClient } from "../sanity";
+import SwiperWOLinks from '../components/SwiperWOLinks'
 
 
-export default function getInvolved() {
+export default function getInvolved({ getInvolved }) {
+
+  const {title, description, subTitle, images} = getInvolved
     return (
       <div>
         <NavBar />
         <div id="sectionWavesRed">
-          <div className="min-h-screen flex md:grid md:grid-cols-2 justify-center items-center">
+          <div className="min-h-screen grid md:grid-cols-2 justify-center items-center">
             <div className="flex flex-col  text-white h-full justify-center mx-auto">
               <div className="text-5xl lg:text-7xl 2xl:text-9xl font-bold text-white">
                 Get involved
@@ -19,7 +23,7 @@ export default function getInvolved() {
               <div className="text-lg md:text-xl lg:text-2xl font-light">
                 Here you can find our google forms etc.
               </div>
-              <div className="grid grid-cols-2 gap-4 w-full py-8">
+              <div className="grid grid-cols-2 gap-4 w-full pt-8">
                 <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfHD5IisKGjxXaz-Pl_atGsRgRs7e3I7Mc-FD8LagmrQ27z0Q/viewform?usp=sf_link">
                   <a className="button1 bouncy uppercase text-sm  sm:text-base">
                     Join the Team
@@ -32,24 +36,35 @@ export default function getInvolved() {
                 </Link>
               </div>
             </div>
-            <div>
-              <Image src={GetInvolved} layout="responsive" />
+            <div className='overflow-x-hidden max-w-xs md:max-w-md lg:max-w-lg mx-auto w-full h-full md:h-auto'>
+              <SwiperWOLinks images={ images } />
             </div>
           </div>
         </div>
-        {/* <div className="flex justify-center items-center bg-red-600">
-          <iframe
-            className="overflow-y-hidden"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfHD5IisKGjxXaz-Pl_atGsRgRs7e3I7Mc-FD8LagmrQ27z0Q/viewform?embedded=true"
-            width="640"
-            height="1989"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-          >
-            Loading…
-          </iframe>
-        </div> */}
       </div>
     );
 }
+
+export const getServerSideProps = async ({ params }) => {
+  //  title,
+  //   subTitle,
+  //   description,
+  // export const getServerSideProps = async ({ params }) => {
+  const query = `*[_type == "getInvolved"][0]{
+    title,
+    subTitle,
+    description,
+    "images": images[].asset->{
+                        _id,
+                        url
+                    }
+  }`;
+
+  const getInvolved = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      getInvolved,
+    },
+  };
+};

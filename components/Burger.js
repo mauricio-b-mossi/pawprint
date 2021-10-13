@@ -65,9 +65,14 @@ export default function Burger({handleClick}) {
                   <a className="hover:text-red-600">Food and Travel</a>
                 </Link>
               </div>
+              {/* <div>
+                <Link href="/special-editions">
+                  <a className="hover:text-red-600">Special Editions</a>
+                </Link>
+              </div> */}
             </div>
-            <div className="py-2 sm:py-4">
-              <div>
+            {/* <div className="py-2 sm:py-4"> */}
+            {/* <div>
                 <Link href="/student-work">
                   <a className="hover:text-red-600">Student Work</a>
                 </Link>
@@ -81,13 +86,13 @@ export default function Burger({handleClick}) {
                 <Link href="/community-updates">
                   <a className="hover:text-red-600">Community updates</a>
                 </Link>
-              </div>
-              <div>
+              </div> */}
+            <div>
                 <Link href="/special-editions">
                   <a className="hover:text-red-600">Special Editions</a>
                 </Link>
               </div>
-            </div>
+            {/* </div> */}
             <div className="py-2 sm:py-4">
               <div>
                 <Link href="/about">

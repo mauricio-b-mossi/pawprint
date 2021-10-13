@@ -5,6 +5,7 @@ import NewsGallery from '../components/NewsGallery'
 import NavBar from "../components/NavBar";
 import { sanityClient } from "../sanity";
 import Section from '../components/Section'
+import TopicNewsGrid from '../components/TopicNewsGrid'
 
 export default function Home({ posts }) {
   console.log("====================================");
@@ -14,7 +15,12 @@ export default function Home({ posts }) {
   return (
     <div>
       <NavBar />
-      <NewsGallery post={posts} />
+      {/* <TopicNewsGrid posts={ posts } /> */}
+      <div className="flex justify-center items-center">
+        <div className="max-w-7xl ">
+          <NewsGallery post={posts} />
+        </div>
+      </div>
     </div>
   );
 }

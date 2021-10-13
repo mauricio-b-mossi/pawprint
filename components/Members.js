@@ -27,14 +27,6 @@ const Members = ({ member }) => {
         layout
         className="relative flex justify-center items-center p-8 md:p-16 rounded-lg"
       >
-        {/* <div className="absolute top-6 right-6 md:top-12 md:right-12">
-          <Image
-            src={Information}
-            width="24"
-            height="24"
-            onClick={toggleOpen}
-          />
-        </div> */}
         <div className="flex flex-col justify-center items-center">
           <div className="w-40 h-40 md:w-52 md:h-52 relative">
             <Image

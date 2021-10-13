@@ -33,7 +33,7 @@ export default function LargeNewsBox({ post }) {
           </div>
           {/* New grid */}
           <div className="grid col-span-2 md:col-span-1 xl:col-span-3 lg:col-span-2 lg:grid-cols-2">
-            <div className="lg:hidden capitalize flex items-center w-full font-semibold font-serif col-span-3 text-2xl lg:text-3xl xl:text-4xl  hover:text-red-600 lg:py-4">
+            <div className="lg:hidden capitalize flex items-center w-full font-semibold font-serif col-span-3 text-lg lg:text-xl xl:text-2xl  hover:text-red-600 lg:py-4">
               <Link href={"/article/" + slug.current}>
                 <a>
                   <h1>{title}</h1>
@@ -47,10 +47,10 @@ export default function LargeNewsBox({ post }) {
             </div>
             <div className="lg:border-l  px-0 lg:px-4 col-span-1">
               <div className="grid grid-cols-3 justify-between">
-                <div className=" text-sm grid grid-cols-2 gap-2 items-center">
+                <div className=" text-sm sm:text-base grid grid-cols-2 gap-2 items-center">
                   <p className="text-blue-700 font-sans uppercase font-semibold">
                     {category}
-                    <span className="uppercase text-gray-400 font-serif text-sm sm:text-base ml-2">
+                    <span className="uppercase text-gray-400 font-serif  ml-2">
                       {publishedAt.substring(5, 10).replace("-", ".")}
                     </span>
                   </p>
@@ -66,11 +66,11 @@ export default function LargeNewsBox({ post }) {
                   </Link>
                 </div> */}
                 <div className="lg:hidden flex justify-center items-center  pt-4 col-span-3">
-                  <p className="text-sm sm:text-base">
+                  <p className="text-sm ">
                     {description.substring(0, 130)}...
                   </p>
                 </div>
-                <div className="hidden lg:flex capitalize  font-semibold font-serif col-span-3 text-2xl lg:text-3xl xl:text-4xl  hover:text-red-600 py-4">
+                <div className="hidden lg:flex capitalize  font-semibold font-serif col-span-3 text-lg lg:text-xl xl:text-2xl  hover:text-red-600 py-4">
                   <Link href={"/article/" + slug.current}>
                     <a>
                       <h1>{title}</h1>

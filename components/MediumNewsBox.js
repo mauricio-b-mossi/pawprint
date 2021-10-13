@@ -11,7 +11,7 @@ export default function MediumNewsBox({ post }) {
   const imageProps = useNextSanityImage(sanityClient, mainImage);
   
   return (
-    <div className="col-span-3 md:col-span-1 px-2">
+    <div className="col-span-3 md:col-span-1 px-2 flex-grow-0">
       <div className="grid gap-3">
         <Link href={"/article/" + slug.current}>
           <a>
@@ -22,7 +22,7 @@ export default function MediumNewsBox({ post }) {
             />
           </a>
         </Link>
-        <div className="font-semibold font-serif text-2xl flex justify-start items-center hover:text-red-600">
+        <div className="font-semibold font-serif text-lg lg:text-xl  flex justify-start items-center hover:text-red-600">
           <Link href={"/article/" + slug.current}>
             <a>
               <h1>{title}</h1>
@@ -30,10 +30,10 @@ export default function MediumNewsBox({ post }) {
           </Link>
         </div>
         <div className="grid grid-cols-3 justify-between">
-          <div className=" text-sm grid grid-cols-2 gap-2 items-center">
+          <div className=" text-sm  grid grid-cols-2 gap-2 items-center">
             <p className="text-blue-700 font-sans uppercase font-semibold">
               {category}
-              <span className="uppercase text-gray-400 font-serif text-sm sm:text-base ml-2">
+              <span className="uppercase text-gray-400 font-serif text-sm  ml-2">
                 {publishedAt.substring(5, 10).replace("-", ".")}
               </span>
             </p>
@@ -49,7 +49,7 @@ export default function MediumNewsBox({ post }) {
             </Link>
           </div> */}
           <div className="flex justify-center items-center col-span-3 pt-4">
-            <p className="text-sm sm:text-base">
+            <p className="text-sm">
               {description.substring(0, 130)}...
             </p>
           </div>

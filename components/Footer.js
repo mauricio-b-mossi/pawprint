@@ -45,13 +45,13 @@ export default function Footer() {
               <p className="text-sm py-1 border-t-2 border-blue-300 leading-tight">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
-              <div className="w-72">
+              <div className="w-56">
                 <input
-                  className="py-1 bg-opacity-50 border-t border-l border-b pl-2 bg-gray-700 border-gray-500 placeholder-gray-500 rounded-l-full"
+                  className="py-1 w-36 bg-opacity-50 border-t border-l border-b pl-2 bg-gray-700 border-gray-500 placeholder-gray-500 rounded-l-full"
                   type="text"
                   placeholder="Email address"
                 />
-                <button className="bg-white text-black py-1 px-2 border  rounded-r-full font-semibold hover:bg-red-700 hover:text-white hover:border-r hover:border-red-800">
+                <button className="bg-white w-20 text-black py-1 px-2 border  rounded-r-full font-semibold hover:bg-red-700 hover:text-white hover:border-r hover:border-red-800">
                   Sign up
                 </button>
               </div>

@@ -19,6 +19,7 @@ export default function Home({ posts }) {
       <div className="flex justify-center items-center">
         <div className="max-w-7xl ">
           <NewsGallery post={posts} />
+          {/* <TopicNewsGrid posts={ posts }/> */}
         </div>
       </div>
     </div>

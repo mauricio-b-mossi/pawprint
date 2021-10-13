@@ -45,9 +45,9 @@ export default function Footer() {
               <p className="text-sm py-1 border-t-2 border-blue-300 leading-tight">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
-              <div>
+              <div className="w-72">
                 <input
-                  className="py-1 bg-opacity-50 border-t border-l border-b px-2 bg-gray-700 border-gray-500 placeholder-gray-500 rounded-l-full"
+                  className="py-1 bg-opacity-50 border-t border-l border-b pl-2 bg-gray-700 border-gray-500 placeholder-gray-500 rounded-l-full"
                   type="text"
                   placeholder="Email address"
                 />

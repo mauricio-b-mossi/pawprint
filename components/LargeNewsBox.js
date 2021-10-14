@@ -26,7 +26,7 @@ export default function LargeNewsBox({ post }) {
                 <Image
                   {...imageProps}
                   layout="responsive"
-                  sizes="(max-width: 800px) 100vw, 800px"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
                 />
               </a>
             </Link>

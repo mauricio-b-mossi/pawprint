@@ -16,11 +16,6 @@ const variants = {
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
 
-
-    useEffect(() => {
-        console.log(isOpen);
-    }, [isOpen])
-
     const handleClick = () => {
         setIsOpen(current=> !current)
     }

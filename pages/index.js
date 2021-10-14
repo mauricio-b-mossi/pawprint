@@ -5,7 +5,8 @@ import NewsGallery from '../components/NewsGallery'
 import NavBar from "../components/NavBar";
 import { sanityClient } from "../sanity";
 import Section from '../components/Section'
-import TopicNewsGrid from '../components/TopicNewsGrid'
+import MainNewsGrid from '../components/MainNewsGrid'
+import GenericNewsGrid from '../components/GenericNewsGrid'
 import { useEffect, useState } from "react"
 
 export default function Home({ posts, weather }) {
@@ -14,12 +15,18 @@ export default function Home({ posts, weather }) {
   return (
     <div>
       <NavBar />
-      {/* <TopicNewsGrid posts={ posts } /> */}
-      <div className="flex justify-center items-center">
-        <div className="max-w-7xl ">
-          {/* <NewsGallery post={posts} /> */}
-          <TopicNewsGrid posts={ posts } weather={ weather } />
-        </div>
+      {/* <MainNewsGrid posts={ posts } /> */}
+      <div className="flex flex-col justify-center items-center">
+        {/* <NewsGallery post={posts} /> */}
+        <MainNewsGrid posts={posts} weather={weather} header={"Headlines"} />
+        <div className="w-full bg-yellow-400 py-12"></div>
+        <GenericNewsGrid posts={posts} header={"Art"} />
+        <div className="w-full bg-blue-400 py-12"></div>
+        <GenericNewsGrid posts={posts} header={"Sports"} />
+        <div className="w-full bg-red-400 py-12"></div>
+        <GenericNewsGrid posts={posts} header={"Culture"} />
+        <div className="w-full bg-green-400 py-12"></div>
+        <GenericNewsGrid posts={posts} header={"Lifestyle"} />
       </div>
     </div>
   );

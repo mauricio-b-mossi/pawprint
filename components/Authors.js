@@ -1,18 +1,16 @@
 import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Content from './Content';
-import Link from 'next/link'
-import Information from '../public/information.png'
+import Content from "./Content";
+import Link from "next/link";
+import Information from "../public/information.png";
 
+const Members = ({ author }) => {
 
+    console.log(author);
 
-const Members = ({ member }) => {
+  const { name, bio, image, slug, status } = author;
 
-  const { position, author } = member
-  
-  const {name, bio, image, slug} = author
-    
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => setIsOpen(!isOpen);
@@ -49,7 +47,7 @@ const Members = ({ member }) => {
               <h1 className="font-black pt-3 hover:underline">{name}</h1>
             </a>
           </Link>
-          <h3 className="font-light">{position}</h3>
+                  <h3 className="font-light">{ status }</h3>
         </div>
         {/* TODO: HIDDING TO THE SIDE OPEN */}
         {/* <AnimatePresence>

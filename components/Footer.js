@@ -86,17 +86,17 @@ export default function Footer() {
           {/* Second */}
           <div className="grid lg:grid-cols-2 col-span-6 font-medium font-sans border-l border-gray-500 px-2">
             <div className="flex-grow flex flex-col ">
-              <Link href="/all-topics">
+              <Link href="/topics">
                 <a>
                   <h8 className="py-1 hover:text-red-700">All topics</h8>
                 </a>
               </Link>
-              <Link href="/all-writers">
+              <Link href="/members">
                 <a>
                   <h8 className="py-1 hover:text-red-700">All writers</h8>
                 </a>
               </Link>
-              <Link href="/get-involved">
+              <Link href="https://www.instagram.com/thepawprintabc/">
                 <a>
                   <h8 className="py-1 hover:text-red-700">Instagram</h8>
                 </a>

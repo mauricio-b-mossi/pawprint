@@ -6,7 +6,7 @@ export default function SmallNewsBox({ post }) {
   const {publishedAt, title, slug, author, category} = post;
 
   return (
-    <div className="border-t mx-auto max-w-xs md:max-w-none flex flex-col my-auto items-center justify-center h-full">
+    <div className="border-b mx-auto max-w-xs md:max-w-none flex flex-col my-auto items-center justify-center h-full">
       <div className="grid grid-cols-3 justify-between">
         <div className=" text-sm grid grid-cols-2 gap-2 items-center">
           <p className="text-blue-700 font-sans uppercase font-semibold">

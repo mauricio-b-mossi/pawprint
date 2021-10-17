@@ -40,9 +40,21 @@ export default function Slug({ post }) {
             </p>
           </div>
           <div className="flex justify-around items-center border-t border-b border-black p-2 md:col-span-2">
-            <Image src={Insta} width="20" height="20" />
-            <Image src={Email} width="20" height="20" />
-            <Image src={Share} width="20" height="20" />
+            <Link href="https://www.instagram.com/thepawprintabc/">
+              <a>
+                <Image src={Insta} width="20" height="20" />
+              </a>
+            </Link>
+            <Link href="mailto:thepawprint@abc-net.edu.sv">
+              <a>
+                <Image src={Email} width="20" height="20" />
+              </a>
+            </Link>
+            <Link href="https://twitter.com/share?url=<URL>&text=<TEXT>via=<USERNAME>">
+              <a>
+                <Image src={Share} width="20" height="20" />
+              </a>
+            </Link>
           </div>
         </div>
         {/* Head */}
@@ -56,7 +68,7 @@ export default function Slug({ post }) {
               <br />
               <Link href={"/member/" + author.slug.current}>
                 <a>
-                  <h8 className='hover:underline'>{author.name}</h8>
+                  <h8 className="hover:underline">{author.name}</h8>
                 </a>
               </Link>
             </div>

@@ -21,4 +21,10 @@ export default {
       type: "string",
     },
   ],
+  preview: {
+    select: {
+      title: "position",
+      media: "author.image",
+    },
+  },
 };

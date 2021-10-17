@@ -1,6 +1,6 @@
 export default {
-  name: "category",
-  title: "Category",
+  name: "section",
+  title: "Sections",
   type: "document",
   fields: [
     {
@@ -9,18 +9,15 @@ export default {
       type: "string",
     },
     {
+      name: "order",
+      title: "Order",
+      description: "Number in which member appears in the website",
+      type: "number",
+    },
+    {
       name: "description",
       title: "Description",
       type: "text",
-    },
-    {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
     },
     {
       name: "image",

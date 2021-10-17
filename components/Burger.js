@@ -41,7 +41,7 @@ export default function Burger({handleClick}) {
           <div className="flex-col font-semibold text-xl pt-4">
             <div className="py-2 sm:py-4">
               <div>
-                <Link href="/">
+                <Link href="/news">
                   <a className="hover:text-red-600">News</a>
                 </Link>
               </div>

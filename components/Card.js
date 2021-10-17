@@ -2,7 +2,6 @@ import React from 'react'
 import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";
 import Image from "next/image";
-import MadTrump from "../public/madTrump.jpg";
 import Link from "next/link";
 
 export default function Card({ data }) {

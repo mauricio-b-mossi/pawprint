@@ -19,7 +19,7 @@ export default function NewsGallery({ post }) {
     // <div className="grid xl:grid-cols-4 gap-8">
     <div className="col-span-4 grid xl:grid-cols-4 gap-8">
       <div className="col-span-3 flex ">
-        <div className="grid grid-cols-3 gap-10 xl:gap-0  border-r ">
+        <div className="grid grid-cols-3 gap-10 xl:gap-0  border-r border-l ">
           {largeNewsBox.map((post, key) => (
             <LargeNewsBox key={key} post={post} />
           ))}

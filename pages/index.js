@@ -8,6 +8,7 @@ import MainNewsGrid from '../components/MainNewsGrid'
 import GenericNewsGrid from '../components/GenericNewsGrid'
 import { useEffect, useState } from "react"
 import Section from "../components/Section"
+import ColorSectionStrip from '../components/ColorSectionStrip'
 
 export default function Home({ posts, weather }) {
 
@@ -18,12 +19,23 @@ export default function Home({ posts, weather }) {
       {/* <MainNewsGrid posts={ posts } /> */}
       <div className="flex flex-col justify-center items-center">
         {/* <NewsGallery post={posts} /> */}
+
         <MainNewsGrid posts={posts} weather={weather} header={"Headlines"} />
         <Section />
-        <GenericNewsGrid posts={posts} header={"Art"} />
-        <GenericNewsGrid posts={posts} header={"Sports"} />
-        <GenericNewsGrid posts={posts} header={"Culture"} />
-        <GenericNewsGrid posts={posts} header={"Lifestyle"} />
+        <GenericNewsGrid posts={posts} header={"News"} link={"/news"} />
+        <GenericNewsGrid posts={posts} header={"Art"} link={"/arts"} />
+        <ColorSectionStrip />
+        <GenericNewsGrid posts={posts} header={"Sports"} link={"/sports"} />
+        <GenericNewsGrid
+          posts={posts}
+          header={"Culture"}
+          link={"/pop-culture"}
+        />
+        <GenericNewsGrid
+          posts={posts}
+          header={"Lifestyle"}
+          link={"/food-and-travel"}
+        />
       </div>
     </div>
   );

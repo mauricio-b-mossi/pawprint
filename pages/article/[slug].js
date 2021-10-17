@@ -7,11 +7,12 @@ import Share from "../../public/shareIcon.svg";
 import Email from "../../public/emailIcon.svg";
 import { useNextSanityImage } from "next-sanity-image";
 import BlockContent from "@sanity/block-content-to-react";
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Slug({ post }) {
-  const { title, category, mainImage, publishedAt, author, description, body} =
+  const { title, category, mainImage, publishedAt, author, description, body } =
     post;
+  console.log(category);
 
   const serializers = {
     types: {
@@ -35,9 +36,13 @@ export default function Slug({ post }) {
             {publishedAt.substring(0, 10).replace("-", ".").replace("-", ".")}
           </div>
           <div>
-            <p className="text-blue-700 font-sans uppercase font-semibold border-t border-black pb-2 ">
-              {category}
-            </p>
+            <Link href={"/topics/" + category.slug.current}>
+              <a>
+                <p className="text-blue-700 font-sans uppercase font-semibold border-t border-black pb-2 ">
+                  {category.title}
+                </p>
+              </a>
+            </Link>
           </div>
           <div className="flex justify-around items-center border-t border-b border-black p-2 md:col-span-2">
             <Link href="https://www.instagram.com/thepawprintabc/">
@@ -107,7 +112,7 @@ export const getServerSideProps = async (context) => {
     *[slug.current == $slug][0]{
        title,
        "author": author->{name,slug},
-       "category": categories[]->title[0],
+       "category": categories[0]->{title,slug},
         publishedAt,
      description,
      body,

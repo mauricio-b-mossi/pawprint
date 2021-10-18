@@ -118,7 +118,7 @@ export default function Footer() {
               </h8>
               <p>Available for everyone, funded by readers</p>
               <div className="grid md:grid-cols-2 gap-2 justify-between items-center py-2">
-                <Link href="#">
+                <Link href="/get-involved">
                   <a>
                     <div className="rounded-full bg-red-700 px-2 flex items-center w-36 group ">
                       <h8 className="px-2">Contribute</h8>
@@ -131,7 +131,7 @@ export default function Footer() {
                     </div>
                   </a>
                 </Link>
-                <Link href="#">
+                <Link href="/get-involved">
                   <a>
                     <div className="rounded-full bg-red-700 px-2 flex items-center w-36 group ">
                       <h8 className="px-2">Contribute</h8>

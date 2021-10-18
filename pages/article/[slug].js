@@ -71,7 +71,7 @@ export default function Slug({ post }) {
             <div className="uppercase my-4 md:text-xl">
               <h8>By</h8>
               <br />
-              <Link href={"/member/" + author.slug.current}>
+              <Link href={"/members/" + author.slug.current}>
                 <a>
                   <h8 className="hover:underline">{author.name}</h8>
                 </a>

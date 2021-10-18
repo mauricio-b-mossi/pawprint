@@ -6,7 +6,7 @@ import Send from '../public/send.svg'
 
 export default function ColorSectionStrip() {
     return (
-      <div className="flex w-full">
+      <div className="flex w-full ">
         <div className="hidden lg:block bg-yellow-200 p-4 flex-grow"></div>
         <div className="bg-yellow-300 w-full max-w-7xl p-4 flex-grow">
           <div className="flex justify-start items-center">
@@ -26,7 +26,7 @@ export default function ColorSectionStrip() {
               <div className="flex justify-center items-center col-span-1">
                 <Link href="/get-involved">
                   <a>
-                    <Image src={Send} width="75" height="75" />
+                    <Image src={Send} width="75" height="75" className='transform ease-in-out duration-300 hover:rotate-720'/>
                   </a>
                 </Link>
               </div>

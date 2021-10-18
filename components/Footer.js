@@ -120,17 +120,27 @@ export default function Footer() {
               <div className="grid md:grid-cols-2 gap-2 justify-between items-center py-2">
                 <Link href="#">
                   <a>
-                    <div className="rounded-full bg-red-700 px-2 flex items-center w-36">
+                    <div className="rounded-full bg-red-700 px-2 flex items-center w-36 group ">
                       <h8 className="px-2">Contribute</h8>
-                      <Image src={Arrow} width="20" height="20" />
+                      <Image
+                        src={Arrow}
+                        width="20"
+                        height="20"
+                        className="transform ease-in-out duration-75 group-hover:scale-110"
+                      />
                     </div>
                   </a>
                 </Link>
                 <Link href="#">
                   <a>
-                    <div className="rounded-full bg-red-700 px-2 flex items-center w-36 ">
+                    <div className="rounded-full bg-red-700 px-2 flex items-center w-36 group ">
                       <h8 className="px-2">Contribute</h8>
-                      <Image src={Arrow} width="20" height="20" />
+                      <Image
+                        src={Arrow}
+                        width="20"
+                        height="20"
+                        className="transform ease-in-out duration-75 group-hover:scale-110"
+                      />
                     </div>
                   </a>
                 </Link>

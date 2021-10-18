@@ -13,10 +13,10 @@ export default function getInvolved({ getInvolved }) {
     return (
       <div>
         <NavBar />
-        <div id="sectionWavesRed">
+        <div id="figuresSVG">
           <div className="min-h-screen grid md:grid-cols-2 justify-center items-center">
-            <div className="flex flex-col  text-white h-full justify-center mx-auto">
-              <div className="text-5xl lg:text-7xl 2xl:text-9xl font-bold text-white">
+            <div className="flex flex-col   h-full justify-center mx-auto">
+              <div className="text-5xl lg:text-7xl 2xl:text-9xl font-bold ">
                 Get involved
               </div>
               <div className="text-3xl md:text-4xl ">Hi there.</div>

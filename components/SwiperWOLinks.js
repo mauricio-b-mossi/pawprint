@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
+import styles from '../styles/SwiperWOLinks.module.css';
+
 
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
@@ -33,7 +35,7 @@ export default function App({ images }) {
           slideShadows: true,
         }}
         pagination={true}
-        className="mySwiper"
+        className={styles.mySwiper}
       >
         {images &&
           images.map((img, index) => (

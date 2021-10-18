@@ -12,19 +12,19 @@ export default function about() {
         <NavBar />
         {/* Main section */}
 
-        <div  className="grid md:grid-cols-3 min-h-screen bg-red-600 ">
+        <div id="figuresSVG"  className="grid md:grid-cols-3 min-h-screen">
           <div className="md:col-span-3 min-h-screen grid md:grid-cols-3">
             <div className="flex justify-center items-center">
-              <h1 className="font-serif text-3xl md:text-5xl text-white">
-                Reasons
+              <h1 className="font-serif text-3xl md:text-5xl ">
+                About
               </h1>
             </div>
             <div className="flex justify-center items-center px-20 sm:px-28 md:px-0 lg:px-12 ">
-              <Image src={AboutImage} responsive />
+              <Image src={Logo} responsive />
             </div>
             <div className="flex justify-center items-center">
-              <h1 className="font-serif text-3xl md:text-5xl italic text-white">
-                in Revolt
+              <h1 className="font-serif text-3xl md:text-5xl italic ">
+                About
               </h1>
             </div>
           </div>
@@ -32,10 +32,10 @@ export default function about() {
           <div className="grid md:col-span-3 md:grid-cols-3 px-4 items-center justify-center min-h-screen">
             <div className="hidden md:block"></div>
               <div className="col-span-3 md:col-auto flex flex-col text-center max-w-sm md:max-w-none">
-                <h1 className="font-serif text-3xl lg:text-5xl text-white py-4 border-b uppercase ">
+                <h1 className="font-serif text-3xl lg:text-5xl  py-4 border-b uppercase ">
                   About us
                 </h1>
-                <div className="py-8 text-sm md:text-base text-white font-serif">
+                <div className="py-8 text-sm md:text-base  font-serif">
                   <p>
                     The Paw Print is the student-run newspaper of ABC. It
                     provides a forum for students, faculty, and members of the
@@ -50,10 +50,10 @@ export default function about() {
               <div className="hidden md:block"></div>
               <div className="hidden md:block"></div>
               <div className="col-span-3 md:col-auto flex flex-col text-center max-w-sm md:max-w-none">
-                <h1 className="font-serif text-3xl lg:text-5xl text-white py-4 border-b uppercase ">
+                <h1 className="font-serif text-3xl lg:text-5xl  py-4 border-b uppercase ">
                   Mission Statement
                 </h1>
-                <div className="py-8 text-sm md:text-base text-white font-serif">
+                <div className="py-8 text-sm md:text-base  font-serif">
                   <p>
                     “Our mission is to provide the most reliable, accurate, and
                     interesting information to the students, faculty, staff, and

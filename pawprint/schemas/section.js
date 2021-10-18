@@ -1,6 +1,6 @@
 export default {
   name: "section",
-  title: "Sections",
+  title: "Section",
   type: "document",
   fields: [
     {
@@ -9,15 +9,32 @@ export default {
       type: "string",
     },
     {
-      name: "order",
-      title: "Order",
-      description: "Number in which member appears in the website",
-      type: "number",
+      name: "body",
+      title: "Body",
+      type: "text",
+      validation: (Rule) => [
+        Rule.required()
+          .min(10)
+          .error("A title of min. 10 characters is required"),
+        Rule.max(200).warning("Shorter text is usually displayed better"),
+      ],
     },
     {
-      name: "description",
-      title: "Description",
-      type: "text",
+      name: "section",
+      title: "Section",
+      description: "Page in the website were section will be displayed",
+      type: "string",
+      options: {
+        list: [
+          { title: "Home", value: "home" },
+          { title: "News", value: "news" },
+          { title: "Arts", value: "arts" },
+          { title: "Sports", value: "sports" },
+          { title: "Pop culture", value: "pop" },
+          { title: "Food and Travel", value: "food" },
+        ],
+        layout: "radio",
+      },
     },
     {
       name: "image",
@@ -30,7 +47,7 @@ export default {
   ],
   preview: {
     select: {
-      title: "title",
+      title: "section",
       media: "image",
     },
   },

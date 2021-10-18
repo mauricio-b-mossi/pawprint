@@ -7,7 +7,7 @@ import Information from "../public/information.png";
 
 const Members = ({ author }) => {
 
-    console.log(author);
+    // console.log(author);
 
   const { name, bio, image, slug, status } = author;
 

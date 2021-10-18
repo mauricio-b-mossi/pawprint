@@ -7,7 +7,7 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Head from 'next/head'
 
 export default function index({ authors }) {
-  console.log(authors);
+  // console.log(authors);
     const information = {
       title: "Special Thanks Writers!",
       description:

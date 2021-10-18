@@ -10,9 +10,9 @@ import Head from 'next/head';
 export default function Author({ member }) {
 
     const {bio, image, name, posts} = member
-    console.log('====================================');
-    console.log(member);
-    console.log('====================================');
+    // console.log('====================================');
+    // console.log(member);
+    // console.log('====================================');
     
     return (
       <div id="figuresSVG" className="min-h-screen">

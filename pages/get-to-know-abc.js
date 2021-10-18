@@ -7,7 +7,7 @@ import { sanityClient } from "../sanity";
 
 export default function GetToKnowABC({teachers}) {
 
-    console.log(teachers);
+    // console.log(teachers);
 
     const information = {
       title: "Get to know the ABC",

@@ -13,7 +13,7 @@ import Head from "next/head";
 export default function Slug({ post }) {
   const { title, category, mainImage, publishedAt, author, description, body } =
     post;
-  console.log(category);
+  // console.log(category);
 
   const serializers = {
     types: {

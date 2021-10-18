@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { sanityClient } from "../../sanity";
 import Image from "next/image";
 import SearchItemBox from "../../components/SearchItemBox";
+import Head from 'next/head'
 
 export default function Category({ category }) {
     
@@ -17,6 +18,13 @@ export default function Category({ category }) {
     };
     return (
       <div id="figuresSVG" className="min-h-screen ">
+        <Head>
+          <title>{ title } | Pawprint</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <NavBar />
         <div className="w-full flex flex-col justify-center items-center pb-8">
           <div className="py-8">

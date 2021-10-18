@@ -18,6 +18,10 @@ export default function Home({ News, Home, Arts, Sports, Pop, Food, SectionHome,
 
   return (
     <div>
+      <Head>
+        <title>News, Arts, Sports, and more.</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavBar />
       {/* <MainNewsGrid posts={ posts } /> */}
       <div className="flex flex-col justify-center items-center">
@@ -26,16 +30,12 @@ export default function Home({ News, Home, Arts, Sports, Pop, Food, SectionHome,
         <MainNewsGrid posts={Home} weather={weather} header={"Headlines"} />
         <RedSectionStrip />
         <GenericNewsGrid posts={News} header={"News"} link={"/news"} />
-        <Section data={ SectionHome }/>
+        <Section data={SectionHome} />
         <GenericNewsGrid posts={Arts} header={"Art"} link={"/arts"} />
         <YellowSectionStrip />
         <GenericNewsGrid posts={Sports} header={"Sports"} link={"/sports"} />
         <BlueSectionStrip />
-        <GenericNewsGrid
-          posts={Pop}
-          header={"Culture"}
-          link={"/pop-culture"}
-        />
+        <GenericNewsGrid posts={Pop} header={"Culture"} link={"/pop-culture"} />
         <GreenSectionStrip />
         <GenericNewsGrid
           posts={Food}

@@ -8,6 +8,7 @@ import Email from "../../public/emailIcon.svg";
 import { useNextSanityImage } from "next-sanity-image";
 import BlockContent from "@sanity/block-content-to-react";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Slug({ post }) {
   const { title, category, mainImage, publishedAt, author, description, body } =
@@ -27,6 +28,10 @@ export default function Slug({ post }) {
   const imageProps = useNextSanityImage(sanityClient, mainImage);
   return (
     <div>
+      <Head>
+        <title>{ title} | Pawprint</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavBar />
       {/* Post */}
       <div className="min-h-screen p-8">

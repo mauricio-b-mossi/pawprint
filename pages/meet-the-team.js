@@ -4,6 +4,7 @@ import MembersSectionHeader from "../components/MembersSectionHeader";
 import Members from "../components/Members";
 import { sanityClient } from "../sanity";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import Head from 'next/head'
 
 export default function meetTheTeam({ members }) {
   const information = {
@@ -14,6 +15,10 @@ export default function meetTheTeam({ members }) {
   // console.log(members);
   return (
     <div>
+      <Head>
+        <title>Meet the team | Pawprint</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavBar />
       <div id="sectionGradient" className="min-h-screen  text-white">
         <MembersSectionHeader information={information} />

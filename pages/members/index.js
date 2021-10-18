@@ -4,6 +4,7 @@ import MembersSectionHeader from "../../components/MembersSectionHeader";
 import Authors from '../../components/Authors'
 import { sanityClient } from "../../sanity";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import Head from 'next/head'
 
 export default function index({ authors }) {
   console.log(authors);
@@ -14,6 +15,10 @@ export default function index({ authors }) {
     };
   return (
     <div>
+      <Head>
+        <title>Writers | Pawprint</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavBar />
       <div id="confettiSVG" className="min-h-screen">
         <MembersSectionHeader information={information} />

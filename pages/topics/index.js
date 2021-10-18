@@ -5,6 +5,7 @@ import MadTrump from "../../public/madTrump.jpg";
 import Image from "next/image";
 import Card from "../../components/Card";
 import MembersSectionHeader from "../../components/MembersSectionHeader";
+import Head from 'next/head'
 
 export default function index({ categories }) {
 
@@ -16,15 +17,17 @@ export default function index({ categories }) {
 
   return (
     <div id="figuresSVG" className="min-h-screen ">
+      <Head>
+        <title>Topics | Pawprint</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavBar />
       <div className="text-black py-8">
         <MembersSectionHeader information={information} />
       </div>
       <div className="grid justify-center items-center gap-4">
-          {categories &&
-            categories.map((member, index) => (
-              <Card data={member} key={index} />
-            ))}
+        {categories &&
+          categories.map((member, index) => <Card data={member} key={index} />)}
       </div>
     </div>
   );

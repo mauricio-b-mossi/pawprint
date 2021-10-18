@@ -4,10 +4,15 @@ import Image from "next/image";
 import Email from "../public/emailLetter.jpg";
 import Insta from "../public/instaBig.png";
 import Link from 'next/link'
+import Head from "next/head";
 
 export default function contactUs() {
   return (
     <div>
+      <Head>
+        <title>Contact Us | Pawprint</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavBar />
       <div
         id="figuresSVG"

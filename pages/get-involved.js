@@ -5,6 +5,7 @@ import GetInvolved from "../public/getInvolved.gif";
 import Link from "next/link";
 import { sanityClient } from "../sanity";
 import SwiperWOLinks from '../components/SwiperWOLinks'
+import Head from 'next/head'
 
 
 export default function getInvolved({ getInvolved }) {
@@ -12,6 +13,13 @@ export default function getInvolved({ getInvolved }) {
   const {title, description, subTitle, images} = getInvolved
     return (
       <div>
+        <Head>
+          <title>Get Involved | Pawprint</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <NavBar />
         <div id="figuresSVG">
           <div className="min-h-screen grid md:grid-cols-2 justify-center items-center">
@@ -36,8 +44,8 @@ export default function getInvolved({ getInvolved }) {
                 </Link>
               </div>
             </div>
-            <div className='overflow-x-hidden max-w-xs md:max-w-md lg:max-w-lg mx-auto w-full h-full md:h-auto'>
-              <SwiperWOLinks images={ images } />
+            <div className="overflow-x-hidden max-w-xs md:max-w-md lg:max-w-lg mx-auto w-full h-full md:h-auto">
+              <SwiperWOLinks images={images} />
             </div>
           </div>
         </div>

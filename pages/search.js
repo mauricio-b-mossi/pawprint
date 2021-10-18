@@ -2,12 +2,20 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import SearchComponent from '../components/SearchComponent'
 import { sanityClient } from "../sanity";
+import Head from 'next/head'
 
 export default function search({ posts}) {
     return (
       <div>
+        <Head>
+          <title>Search | Pawprint</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <NavBar />
-          <SearchComponent postList={posts} />
+        <SearchComponent postList={posts} />
       </div>
     );
 }

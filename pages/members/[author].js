@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import { sanityClient } from "../../sanity";
 import Image from 'next/image';
 import SearchItemBox from '../../components/SearchItemBox';
+import Head from 'next/head';
+
 
 export default function Author({ member }) {
 
@@ -14,6 +16,13 @@ export default function Author({ member }) {
     
     return (
       <div id="figuresSVG" className="min-h-screen">
+        <Head>
+          <title>{name} | Pawprint</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <NavBar />
         <div className="w-full flex flex-col justify-center items-center pb-8">
           <div className="py-8">
@@ -34,7 +43,9 @@ export default function Author({ member }) {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-                    {posts.map((post, key) => <SearchItemBox key={key} post={post} />)}
+          {posts.map((post, key) => (
+            <SearchItemBox key={key} post={post} />
+          ))}
         </div>
       </div>
     );

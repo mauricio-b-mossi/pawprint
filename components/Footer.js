@@ -4,6 +4,7 @@ import Image from "next/image";
 import Arrow from '../public/blackSmallArrow.svg'
 
 export default function Footer() {
+  const text = "Sign up to The Pawprint's newsletter";
   return (
     <div className="bg-blue-900 text-white over overflow-x-hidden flex justify-center items-center  ">
       <div className="max-w-7xl border-r border-l border-gray-500">
@@ -48,7 +49,7 @@ export default function Footer() {
           <div className="col-span-12 xl:col-span-3 w-full  border-b border-t xl:border-t-0 border-gray-500 py-2 pb-12">
             <div className="max-w-xs px-4">
               <h8 className="font-bold font-sans tracking-tight">
-                Sign up to The Pawprint's newsletter
+                {text}
               </h8>
               <p className="text-sm py-1 border-t-2 border-blue-300 leading-tight">
                 Get the latest news and issues of The Pawprint.
@@ -141,19 +142,6 @@ export default function Footer() {
                     </div>
                   </a>
                 </Link>
-                {/* <Link href="/get-involved">
-                  <a>
-                    <div className="rounded-full bg-red-700 px-2 flex items-center w-36 group ">
-                      <h8 className="px-2">Contribute</h8>
-                      <Image
-                        src={Arrow}
-                        width="20"
-                        height="20"
-                        className="transform ease-in-out duration-75 group-hover:scale-110"
-                      />
-                    </div>
-                  </a>
-                </Link> */}
               </div>
             </div>
           </div>

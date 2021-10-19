@@ -8,18 +8,19 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 export default function meetTheTeam({ members }) {
-
+  const page = " page!"
+  const link = "Get Involved"
   const bodyText =
-    "This is ABC Paw Print's organizing team, we are a group of passionate students with diverse interests! Click on the icons to learn a little bit more about each member. If you're interested in joining the team, please check the";
+    "This is ABC Paw Print\'s organizing team, we are a group of passionate students with diverse interests! Click on the icons to learn a little bit more about each member. If you're interested in joining the team, please check the ";
   const information = {
     title: "Meet pawprint executives",
     description: (
       <span>
         {bodyText}
         <Link href="/get-involved">
-          <a className="font-bold"> "Get Involved" </a>
+          <a className="font-bold">{link}</a>
         </Link>
-        page!
+        {page}
       </span>
     ),
   };

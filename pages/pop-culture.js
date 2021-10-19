@@ -19,7 +19,7 @@ export default function PopCulture({ Pop, Section }) {
       <div className="flex flex-col justify-center items-center">
         <GenericNewsGrid
           posts={Main}
-          header={"Culture"}
+          header={"Pop Culture"}
           link={"/pop-culture"}
         />
         <SectionItem data={Section} />

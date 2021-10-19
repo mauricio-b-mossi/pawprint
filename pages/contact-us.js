@@ -23,8 +23,8 @@ export default function contactUs() {
         </div>
         {/* <div className="text-3xl md:text-4xl ">Hi there.</div> */}
         <div className="text-lg md:text-xl lg:text-2xl font-light max-w-lg  text-center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-          enim quaerat.
+          If you want to announce something like an event, CAS Project, or
+          after-school -do not submit the form, email us directly.
         </div>
         <div className="flex flex-col sm:flex-row justify-between items-center max-w-lg w-full">
           <Link href="mailto:thepawprint@abc-net.edu.sv">

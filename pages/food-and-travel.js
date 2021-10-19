@@ -19,7 +19,7 @@ export default function FoodAndTravel({ Food, Section }) {
       <div className="flex flex-col justify-center items-center">
         <GenericNewsGrid
           posts={Main}
-          header={"Lifestyle"}
+          header={"Food and Travel"}
           link={"/food-and-travel"}
         />
         <SectionItem data={Section} />

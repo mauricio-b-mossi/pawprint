@@ -5,12 +5,23 @@ import Members from "../components/Members";
 import { sanityClient } from "../sanity";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function meetTheTeam({ members }) {
   const information = {
     title: "Meet pawprint executives",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque dolorem architecto enim asperiores dignissimos officiis quod! Veniam tenetur perspiciatis expedita ab ad corporis, sapiente aspernatur cupiditate animi vel dolorum atque!",
+    description: (
+      <span>
+        This is ABC Paw Print's organizing team, we are a group of passionate
+        students with diverse interests! Click on the icons to learn a little
+        bit more about each member. If you're interested in joining the team,
+        please check the
+        <Link href="/get-involved" >
+          <a className="font-bold"> "Get Involved" </a>
+        </Link>
+        page!
+      </span>
+    ),
   };
   // console.log(members);
   return (

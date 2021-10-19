@@ -35,11 +35,11 @@ export default function Home({ News, Home, Arts, Sports, Pop, Food, SectionHome,
         <YellowSectionStrip />
         <GenericNewsGrid posts={Sports} header={"Sports"} link={"/sports"} />
         <BlueSectionStrip />
-        <GenericNewsGrid posts={Pop} header={"Culture"} link={"/pop-culture"} />
+        <GenericNewsGrid posts={Pop} header={"Pop Culture"} link={"/pop-culture"} />
         <GreenSectionStrip />
         <GenericNewsGrid
           posts={Food}
-          header={"Lifestyle"}
+          header={"Food and Travel"}
           link={"/food-and-travel"}
         />
       </div>

@@ -8,30 +8,38 @@ export default function Footer() {
     <div className="bg-blue-900 text-white over overflow-x-hidden flex justify-center items-center  ">
       <div className="max-w-7xl border-r border-l border-gray-500">
         {/* Links */}
-        <div className="text-md lg:text-xl  font-bold font-serif flex tracking-tighter pb-4 px-4">
+        <div className="text-sm flex w-full justify-center sm:w-auto sm:justify-start items-center sm:items-start  sm:text-md lg:text-xl  font-bold font-serif  tracking-tighter pb-4 sm:px-4">
           <Link href="/news">
             <a>
-              <h8 className="p-1 lg:pr-12 border-r border-gray-500 ">News</h8>
+              <h8 className="pr-1 sm:p-1 lg:pr-12 border-r border-gray-500 ">
+                News
+              </h8>
             </a>
           </Link>
           <Link href="/arts">
             <a>
-              <h8 className="p-1 lg:pr-12 border-r border-gray-500">Arts</h8>
+              <h8 className="pr-1 sm:p-1 lg:pr-12 border-r border-gray-500">
+                Arts
+              </h8>
             </a>
           </Link>
           <Link href="/sports">
             <a>
-              <h8 className="p-1 lg:pr-12 border-r border-gray-500">Sports</h8>
+              <h8 className="pr-1 sm:p-1 lg:pr-12 border-r border-gray-500">
+                Sports
+              </h8>
             </a>
           </Link>
           <Link href="/pop-culture">
             <a>
-              <h8 className="p-1 lg:pr-12 border-r border-gray-500">Culture</h8>
+              <h8 className="pr-1 sm:p-1 lg:pr-12 border-r border-gray-500">
+                Pop Culture
+              </h8>
             </a>
           </Link>
           <Link href="/food-and-travel">
             <a>
-              <h8 className="p-1 lg:pr-12">Lifestyle</h8>
+              <h8 className="pr-1 sm:p-1 lg:pr-12">Food and Travel</h8>
             </a>
           </Link>
         </div>
@@ -40,10 +48,10 @@ export default function Footer() {
           <div className="col-span-12 xl:col-span-3 w-full  border-b border-t xl:border-t-0 border-gray-500 py-2 pb-12">
             <div className="max-w-xs px-4">
               <h8 className="font-bold font-sans tracking-tight">
-                Sign up for the Guardian Today email
+                Sign up to The Pawprint's newsletter
               </h8>
               <p className="text-sm py-1 border-t-2 border-blue-300 leading-tight">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Get the latest news and issues of The Pawprint.
               </p>
               <div className="w-56">
                 <input
@@ -116,12 +124,14 @@ export default function Footer() {
               <h8 className="text-xl font-bold font-serif text-red-700  border-gray-500 border-t xl:border-t-0">
                 Support Pawprint
               </h8>
-              <p>Available for everyone, funded by readers</p>
+              <p>
+                Available for everyone, maintained by students just like you.
+              </p>
               <div className="grid md:grid-cols-2 gap-2 justify-between items-center py-2">
                 <Link href="/get-involved">
                   <a>
                     <div className="rounded-full bg-red-700 px-2 flex items-center w-36 group ">
-                      <h8 className="px-2">Contribute</h8>
+                      <h8 className="px-2">Get involved</h8>
                       <Image
                         src={Arrow}
                         width="20"
@@ -131,7 +141,7 @@ export default function Footer() {
                     </div>
                   </a>
                 </Link>
-                <Link href="/get-involved">
+                {/* <Link href="/get-involved">
                   <a>
                     <div className="rounded-full bg-red-700 px-2 flex items-center w-36 group ">
                       <h8 className="px-2">Contribute</h8>
@@ -143,7 +153,7 @@ export default function Footer() {
                       />
                     </div>
                   </a>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

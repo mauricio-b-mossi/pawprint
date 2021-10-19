@@ -13,13 +13,10 @@ export default function ColorSectionStrip() {
           <div className="p-4 grid grid-cols-5 text-black ">
             <div className="col-span-4">
               <h1 className="text-xl sm:text-3xl  font-serif  font-semibold tracking-normal py-2">
-                Stay up to date
+                News
               </h1>
               <p className="text-sm sm:text-base max-w-4xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                facere fuga iste quas asperiores dolore modi nisi, ad maxime hic
-                saepe voluptatibus quam suscipit repudiandae ullam veniam
-                libero, in sunt!
+                Student reporting on national and international news events.
               </p>
             </div>
             <div className="flex justify-center items-center col-span-1">

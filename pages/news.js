@@ -5,6 +5,7 @@ import SectionItem from '../components/Section';
 import ThreeGrid from '../components/ThreeGallery';
 import { sanityClient } from '../sanity';
 import Head from 'next/head'
+import BlueSectionStrip from '../components/BlueSectionStrip';
 
 
 export default function news({ News, Section }) {
@@ -22,6 +23,7 @@ export default function news({ News, Section }) {
           />
         </Head>
         <div className="flex flex-col justify-center items-center">
+          <BlueSectionStrip />
           <GenericNewsGrid posts={Main} header={"News"} link={"/news"} />
           <SectionItem data={Section} />
           <ThreeGrid posts={Rest} />

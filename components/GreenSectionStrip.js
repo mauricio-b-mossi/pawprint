@@ -10,7 +10,7 @@ export default function ColorSectionStrip() {
       <div className="hidden lg:block bg-green-200 p-4 flex-grow"></div>
       <div className="bg-green-300 w-full max-w-7xl p-4 flex-grow">
         <div className="flex justify-start items-center">
-          <div className="p-4 grid grid-cols-5 text-black ">
+          <div className="p-4 grid grid-cols-5 text-black mx-auto ">
             <div className="col-span-4">
               <h1 className="text-xl sm:text-3xl  font-serif  font-semibold tracking-normal py-2">
                 Food and Travel

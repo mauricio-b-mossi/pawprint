@@ -12,6 +12,7 @@ import YellowSectionStrip from '../components/YellowSectionStrip'
 import GreenSectionStrip from '../components/GreenSectionStrip'
 import RedSectionStrip from '../components/RedSectionStrip'
 import BlueSectionStrip from '../components/BlueSectionStrip'
+import OrangeSectionStrip from '../components/OrangeSectionStrip'
 
 export default function Home({ News, Home, Arts, Sports, Pop, Food, SectionHome, weather }) {
   
@@ -26,16 +27,20 @@ export default function Home({ News, Home, Arts, Sports, Pop, Food, SectionHome,
       {/* <MainNewsGrid posts={ posts } /> */}
       <div className="flex flex-col justify-center items-center">
         {/* <NewsGallery post={posts} /> */}
-
         <MainNewsGrid posts={Home} weather={weather} header={"Headlines"} />
-        <RedSectionStrip />
+        <BlueSectionStrip />
         <GenericNewsGrid posts={News} header={"News"} link={"/news"} />
         <Section data={SectionHome} />
-        <GenericNewsGrid posts={Arts} header={"Art"} link={"/arts"} />
         <YellowSectionStrip />
+        <GenericNewsGrid posts={Arts} header={"Art"} link={"/arts"} />
+        <RedSectionStrip />
         <GenericNewsGrid posts={Sports} header={"Sports"} link={"/sports"} />
-        <BlueSectionStrip />
-        <GenericNewsGrid posts={Pop} header={"Pop Culture"} link={"/pop-culture"} />
+        <OrangeSectionStrip />
+        <GenericNewsGrid
+          posts={Pop}
+          header={"Pop Culture"}
+          link={"/pop-culture"}
+        />
         <GreenSectionStrip />
         <GenericNewsGrid
           posts={Food}

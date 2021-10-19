@@ -5,6 +5,7 @@ import SectionItem from "../components/Section";
 import ThreeGrid from "../components/ThreeGallery";
 import { sanityClient } from "../sanity";
 import Head from 'next/head'
+import GreenSectionStrip from '../components/GreenSectionStrip'
 
 export default function FoodAndTravel({ Food, Section }) {
   const Main = Food.slice(0, 12);
@@ -17,6 +18,7 @@ export default function FoodAndTravel({ Food, Section }) {
       </Head>
       <NavBar />
       <div className="flex flex-col justify-center items-center">
+        <GreenSectionStrip />
         <GenericNewsGrid
           posts={Main}
           header={"Food and Travel"}

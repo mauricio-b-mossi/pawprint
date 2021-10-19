@@ -5,6 +5,7 @@ import SectionItem from "../components/Section";
 import ThreeGrid from "../components/ThreeGallery";
 import { sanityClient } from "../sanity";
 import Head from 'next/head'
+import RedSectionStrip from '../components/RedSectionStrip'
 
 export default function PopCulture({ Sports, Section }) {
   const Main = Sports.slice(0, 12);
@@ -17,6 +18,7 @@ export default function PopCulture({ Sports, Section }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="flex flex-col justify-center items-center">
+        <RedSectionStrip />
         <GenericNewsGrid posts={Main} header={"Sports"} link={"/sports"} />
         <SectionItem data={Section} />
         <ThreeGrid posts={Rest} />

@@ -5,6 +5,7 @@ import SectionItem from "../components/Section";
 import ThreeGrid from "../components/ThreeGallery";
 import { sanityClient } from "../sanity";
 import Head from 'next/head'
+import YellowSectionStrip from '../components/YellowSectionStrip'
 
 export default function Arts({ Art, Section }) {
   const Main = Art.slice(0, 12);
@@ -17,6 +18,7 @@ export default function Arts({ Art, Section }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="flex flex-col justify-center items-center">
+        <YellowSectionStrip />
         <GenericNewsGrid posts={Main} header={"Arts"} link={"/arts"} />
         <SectionItem data={Section} />
         <ThreeGrid posts={Rest} />

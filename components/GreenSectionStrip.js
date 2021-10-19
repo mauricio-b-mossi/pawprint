@@ -21,7 +21,7 @@ export default function ColorSectionStrip() {
               </p>
             </div>
             <div className="flex justify-center items-center col-span-1">
-              <Link href="/get-involved">
+              <Link href="/food-and-travel">
                 <a>
                   <Image
                     src={Boat}

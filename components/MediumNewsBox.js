@@ -13,13 +13,20 @@ export default function MediumNewsBox({ post }) {
   return (
     <div className="col-span-3 md:col-span-1 px-2 flex-grow-0">
       <div className="grid gap-3">
-        <Link href={"/article/" + slug.current}>
+        {/* <Link href={"/article/" + slug.current}>
           <a>
             <Image
               {...imageProps}
               layout="responsive"
               sizes="(max-width: 800px) 100vw, 800px"
             />
+          </a>
+        </Link> */}
+        <Link href={"/article/" + slug.current}>
+          <a>
+            <div className="relative h-40">
+              <Image {...imageProps} layout="fill" objectFit="cover" />
+            </div>
           </a>
         </Link>
         <div className="font-semibold font-serif text-lg lg:text-xl  flex justify-start items-center hover:text-red-600">
@@ -49,9 +56,7 @@ export default function MediumNewsBox({ post }) {
             </Link>
           </div> */}
           <div className="flex justify-center items-center col-span-3 pt-4">
-            <p className="text-sm">
-              {description.substring(0, 130)}...
-            </p>
+            <p className="text-sm">{description.substring(0, 130)}...</p>
           </div>
         </div>
       </div>

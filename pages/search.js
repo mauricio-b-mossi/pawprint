@@ -14,8 +14,10 @@ export default function search({ posts}) {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <NavBar />
-        <SearchComponent postList={posts} />
+        <div className="min-h-screen">
+          <NavBar />
+          <SearchComponent postList={posts} />
+        </div>
       </div>
     );
 }

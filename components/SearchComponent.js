@@ -31,13 +31,13 @@ export default function SearchComponent({ postList }) {
         />
       </div>
       {isNull ? (
-        <div className="block md:w-lg lg:w-auto lg:px-60">
-          <Image
-            src={NoResult}
-            layout="responsive"
-            sizes="(max-width: 800px) 100vw, 800px"
-          />
-        </div>
+          <div className="block md:w-lg lg:w-auto lg:px-60">
+            <Image
+              src={NoResult}
+              layout="responsive"
+              sizes="(max-width: 800px) 100vw, 800px"
+            />
+          </div>
       ) : (
         postList
           .filter((post) => {

@@ -6,14 +6,26 @@ import Image from "next/image";
 import Card from "../../components/Card";
 import MembersSectionHeader from "../../components/MembersSectionHeader";
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function index({ categories }) {
 
-    const information = {
-      title: "Meet pawprint executives",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque dolorem architecto enim asperiores dignissimos officiis quod! Veniam tenetur perspiciatis expedita ab ad corporis, sapiente aspernatur cupiditate animi vel dolorum atque!",
-    };
+   const page = " page!";
+   const link = "Get Involved";
+  const bodyText =
+    "Explore the wide variety of topics that Paw Print has to offer.  If you're interested in helping us cover more topics, please check the ";
+   const information = {
+     title: "Explore all our Topics",
+     description: (
+       <span>
+         {bodyText}
+         <Link href="/get-involved">
+           <a className="font-bold">{link}</a>
+         </Link>
+         {page}
+       </span>
+     ),
+   };
 
   return (
     <div id="figuresSVG" className="min-h-screen ">

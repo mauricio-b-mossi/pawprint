@@ -45,16 +45,6 @@ export default function MediumNewsBox({ post }) {
               </span>
             </p>
           </div>
-          {/* <div className="uppercase text-gray-400 font-serif">
-            {publishedAt.substring(5, 10).replace("-", ".")}
-          </div>
-          <div className="col-span-2 transition-all ease-in-out hover:underline">
-            <Link href={"/member/" + author.slug.current}>
-              <a>
-                <p>{author.name}</p>
-              </a>
-            </Link>
-          </div> */}
           <div className="flex justify-center items-center col-span-3 pt-4">
             <p className="text-sm">{description.substring(0, 130)}...</p>
           </div>

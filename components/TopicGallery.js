@@ -4,6 +4,7 @@ import MadTrump from "../public/madTrump.jpg";
 import SmallNewsBox from "./SmallNewsBox";
 import MediumNewsBox from "./MediumNewsBox";
 import LargeNewsBox from "./LargeNewsBox";
+import LargeNewsBoxNoHugeImg from "./LargeNewsBoxNoHugeImg";
 
 export default function NewsGallery({ post }) {
   
@@ -21,7 +22,7 @@ export default function NewsGallery({ post }) {
       <div className="col-span-3 flex ">
         <div className="grid grid-cols-3 gap-10 xl:gap-0  border-r border-l ">
           {largeNewsBox.map((post, key) => (
-            <LargeNewsBox key={key} post={post} />
+            <LargeNewsBoxNoHugeImg key={key} post={post} />
           ))}
           {mediumNewsBox.map((post, key) => (
             <MediumNewsBox key={key} post={post} />

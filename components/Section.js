@@ -15,7 +15,7 @@ export default function Section({ data }) {
             className="opacity-50 transform ease-in-out duration-300 group-hover:scale-110"
           />
           <div className="absolute p-4 text-white ">
-            <h1 className="text-lg   sm:text-3xl  font-serif  font-semibold tracking-normal py-2">
+            <h1 className="text-lg   sm:text-3xl  font-sans  font-semibold tracking-normal py-2">
               {data.title}
             </h1>
             <p className="text-sm sm:text-base max-w-4xl">{data.body}</p>

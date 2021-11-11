@@ -13,7 +13,7 @@ export default function WeatherWidget({weather}) {
     //  console.log("====================================");
     return (
       <div className="flex flex-col sm:flex-row xl:flex-col justify-center items-center w-full ">
-        <h3 className="sm:text-md xl:text-lg font-semibold">Santa Tecla</h3>
+        <h3 className="sm:text-md xl:text-lg font-bold">Santa Tecla</h3>
         <div className="flex justify-center items-center xl:border-t xl:border-b xl:w-full">
           <Image
             src={"https:" + condition.icon}

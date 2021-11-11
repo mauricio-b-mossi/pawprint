@@ -11,7 +11,7 @@ export default function MainNewsGrid({ posts, weather, header }) {
       <div className="lg:pt-4 2xl:pt-20 ">
         <div className="grid xl:grid-cols-5 border-t">
           <div className="col-span-4 xl:col-span-1 border-l flex xl:flex-col items-center justify-around xl:justify-start px-4 xl:px-0 xl:w-full ">
-            <div className="font-black font-serif xl:pb-20 pb-2 w-full">
+            <div className="font-black font-sans xl:pb-20 pb-2 w-full">
               <h1 className="text-2xl">{header}</h1>
               <DateWidget />
             </div>

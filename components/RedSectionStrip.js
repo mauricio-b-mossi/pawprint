@@ -12,7 +12,7 @@ export default function ColorSectionStrip() {
         <div className="flex justify-start items-center">
           <div className="p-4 grid grid-cols-5 text-black mx-auto">
             <div className="col-span-4">
-              <h1 className="text-xl sm:text-3xl  font-serif  font-semibold tracking-normal py-2">
+              <h1 className="text-xl sm:text-3xl  font-sans  font-semibold tracking-normal py-2">
                 Sports
               </h1>
               <p className="text-sm sm:text-base max-w-4xl">

@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="bg-blue-900 text-white over overflow-x-hidden flex justify-center items-center  ">
       <div className="max-w-7xl border-r border-l border-gray-500">
         {/* Links */}
-        <div className="text-sm flex w-full justify-center sm:w-auto sm:justify-start items-center sm:items-start  sm:text-md lg:text-xl  font-bold font-sans  tracking-tighter pb-4 sm:px-4">
+        <div className="text-sm flex w-full  sm:w-auto sm:justify-start items-center sm:items-start  sm:text-md lg:text-xl  font-bold font-sans  tracking-tighter pb-4 sm:px-4">
           <Link href="/news">
             <a>
               <h8 className="pr-1 sm:p-1 lg:pr-12 border-r border-gray-500 ">

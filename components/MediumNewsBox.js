@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";
 import Link from "next/link";
+import Pawprint from "../public/pawprint.png";
 
 export default function MediumNewsBox({ post }) {
 
@@ -25,7 +26,21 @@ export default function MediumNewsBox({ post }) {
         <Link href={"/article/" + slug.current}>
           <a>
             <div className="relative h-40">
-              <Image {...imageProps} layout="fill" objectFit="cover" />
+
+                {imageProps?.src ? 
+                <Image
+                  {...imageProps}
+                  layout="responsive"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
+                />
+                  :
+                <Image
+                  src={Pawprint}
+                  layout="responsive"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
+                />
+                }
+
             </div>
           </a>
         </Link>

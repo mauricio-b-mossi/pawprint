@@ -9,6 +9,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import BlockContent from "@sanity/block-content-to-react";
 import Link from "next/link";
 import Head from "next/head";
+import Pawprint from "../../public/pawprint.png";
 
 export default function Slug({ post }) {
   const { title, category, mainImage, publishedAt, author, description, body } =
@@ -87,11 +88,19 @@ export default function Slug({ post }) {
             </div>
           </div>
           <div>
-            <Image
-              {...imageProps}
-              layout="responsive"
-              sizes="(max-width: 800px) 100vw, 800px"
-            />
+            {imageProps?.src ? 
+                <Image
+                  {...imageProps}
+                  layout="responsive"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
+                />
+                  :
+                <Image
+                  src={Pawprint}
+                  layout="responsive"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
+                />
+                }
           </div>
         </div>
         {/* Article */}

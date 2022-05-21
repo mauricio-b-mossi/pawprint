@@ -1,8 +1,9 @@
+
+import Pawprint from '..public/'
 import React from "react";
 import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";
 import Image from "next/image";
-import MadTrump from "../public/madTrump.jpg";
 import Link from 'next/link';
 
 export default function SearchItemBox({ post }) {
@@ -38,11 +39,21 @@ export default function SearchItemBox({ post }) {
       <div className="block my-auto">
         <Link href={"/article/" + slug.current}>
           <a>
-            <Image
-              {...imageProps}
-              layout="responsive"
-              sizes="(max-width: 800px) 100vw, 800px"
-            />
+
+                {imageProps?.src ? 
+                <Image
+                  {...imageProps}
+                  layout="responsive"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
+                />
+                  :
+                <Image
+                  src={Pawprint}
+                  layout="responsive"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
+                />
+                }
+
           </a>
         </Link>
       </div>

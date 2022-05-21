@@ -3,7 +3,6 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Content from './Content';
 import Link from 'next/link'
-import Information from '../public/information.png'
 
 
 
@@ -51,12 +50,6 @@ const Members = ({ member }) => {
           </Link>
           <h3 className="font-light">{position}</h3>
         </div>
-        {/* TODO: HIDDING TO THE SIDE OPEN */}
-        {/* <AnimatePresence>
-          <div className="hidden md:block p-8">
-            {isOpen && <Content text={biography} />}
-          </div>
-        </AnimatePresence> */}
       </motion.div>
     </motion.div>
   );

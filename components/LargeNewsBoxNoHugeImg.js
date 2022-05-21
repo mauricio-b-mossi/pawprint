@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import MadTrump from "../public/madTrump.jpg";
+import Pawprint from "../public/pawprint.png";
 import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";
 import Link from 'next/link'
@@ -23,11 +23,20 @@ export default function LargeNewsBox({ post }) {
           <div className="col-span-2 md:col-span-1 xl:col-span-2">
             <Link href={"/article/" + slug.current}>
               <a>
+                {imageProps?.src ? 
                 <Image
                   {...imageProps}
                   layout="responsive"
                   sizes="(max-width: 465.83px) 100vw, 800px"
                 />
+                  :
+                <Image
+                  src={Pawprint}
+                  layout="responsive"
+                  sizes="(max-width: 465.83px) 100vw, 800px"
+                />
+                }
+
               </a>
             </Link>
           </div>

@@ -1,5 +1,5 @@
 
-import Pawprint from '..public/'
+import Pawprint from '../public/pawprint.png'
 import React from "react";
 import { useNextSanityImage } from "next-sanity-image";
 import { sanityClient } from "../sanity";

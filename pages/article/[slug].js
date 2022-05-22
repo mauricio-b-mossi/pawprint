@@ -30,7 +30,7 @@ export default function Slug({ post }) {
   return (
     <div>
       <Head>
-        <title>{ title} | Pawprint</title>
+        <title>{title} | Pawprint</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <NavBar />
@@ -88,19 +88,19 @@ export default function Slug({ post }) {
             </div>
           </div>
           <div>
-            {imageProps?.src ? 
-                <Image
-                  {...imageProps}
-                  layout="responsive"
-                  sizes="(max-width: 465.83px) 100vw, 800px"
-                />
-                  :
-                <Image
-                  src={Pawprint}
-                  layout="responsive"
-                  sizes="(max-width: 465.83px) 100vw, 800px"
-                />
-                }
+            {imageProps?.src ? (
+              <Image
+                {...imageProps}
+                layout="responsive"
+                sizes="(max-width: 800px) 100vw, 800px"
+              />
+            ) : (
+              <Image
+                src={Pawprint}
+                layout="responsive"
+                sizes="(max-width: 800px) 100vw, 800px"
+              />
+            )}
           </div>
         </div>
         {/* Article */}

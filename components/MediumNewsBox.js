@@ -26,21 +26,11 @@ export default function MediumNewsBox({ post }) {
         <Link href={"/article/" + slug.current}>
           <a>
             <div className="relative h-40">
-
-                {imageProps?.src ? 
-                <Image
-                  {...imageProps}
-                  layout="responsive"
-                  sizes="(max-width: 465.83px) 100vw, 800px"
-                />
-                  :
-                <Image
-                  src={Pawprint}
-                  layout="responsive"
-                  sizes="(max-width: 465.83px) 100vw, 800px"
-                />
-                }
-
+              {imageProps?.src ? (
+                <Image {...imageProps} layout="fill" objectFit="cover" />
+              ) : (
+                <Image src={Pawprint} layout="fill" objectFit="cover" />
+              )}
             </div>
           </a>
         </Link>

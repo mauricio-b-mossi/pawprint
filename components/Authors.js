@@ -4,6 +4,7 @@ import Image from "next/image";
 import Content from "./Content";
 import Link from "next/link";
 import Information from "../public/information.png";
+import Pawprint from "../public/pawprint.png"
 
 const Members = ({ author }) => {
 
@@ -27,6 +28,7 @@ const Members = ({ author }) => {
       >
         <div className="flex flex-col justify-center items-center">
           <div className="w-40 h-40 md:w-52 md:h-52 relative">
+            {image?.asset ? 
             <Image
               className="rounded-full cursor-pointer "
               src={image.asset.url}
@@ -35,7 +37,21 @@ const Members = ({ author }) => {
               height="300"
               priority={true}
               onClick={toggleOpen}
-            />
+              />
+              :
+
+            <Image
+              className="rounded-full cursor-pointer "
+              src={Pawprint}
+              alt=""
+              width="300"
+              height="300"
+              priority={true}
+              onClick={toggleOpen}
+              />
+          
+        
+        }
           </div>
 
           {/* TODO: Add this "md:hidden" to make responsive again */}

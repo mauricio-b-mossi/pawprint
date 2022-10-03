@@ -15,7 +15,8 @@ const Members = ({ member }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => setIsOpen(!isOpen);
-
+  
+  if (member?.name){
   return (
     <motion.div
       layout
@@ -52,7 +53,11 @@ const Members = ({ member }) => {
         </div>
       </motion.div>
     </motion.div>
-  );
+  )
+  }
+
+ return <div/>
+   
 };
 
 export default Members;

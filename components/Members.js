@@ -3,6 +3,7 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Content from './Content';
 import Link from 'next/link'
+import pawprint from '../public/pawprint.png'
 
 
 
@@ -10,17 +11,14 @@ const Members = ({ member }) => {
 
   const { position, author } = member
   
-  const {name, bio, image, slug} = author
     
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => setIsOpen(!isOpen);
   
-  if (member?.name){
   return (
     <motion.div
       layout
-      //   initial={{ borderRadius: 10 }}
       className="flex flex-col items-center justify-content"
     >
       <motion.div
@@ -31,32 +29,32 @@ const Members = ({ member }) => {
           <div className="w-40 h-40 md:w-52 md:h-52 relative">
             <Image
               className="rounded-full cursor-pointer "
-              src={image.asset.url}
+              src={author?.image.asset.url ? author.image.asset.url : pawprint}
               alt=""
               width="300"
               height="300"
               priority={true}
-              onClick={toggleOpen}
+              
+              onClick={author?.bio ? toggleOpen : console.log("Empty Bio")}
             />
           </div>
 
-          {/* TODO: Add this "md:hidden" to make responsive again */}
+          {/* If there is no bio do not let tap */}
           <AnimatePresence>
-            <div className="block p-2">{isOpen && <Content text={bio} />}</div>
+            <div className="block p-2">{isOpen && <Content text={author?.bio} />}</div>
           </AnimatePresence>
-          <Link href={"/members/" + slug.current}>
+          <Link href={"/members/" + author?.slug.current}>
             <a>
-              <h1 className="font-black pt-3 hover:underline">{name}</h1>
+              <h1 className="font-black pt-3 hover:underline">{author?.name ? author.name : "Vacant"}</h1>
             </a>
           </Link>
-          <h3 className="font-light">{position}</h3>
+          <h3 className="font-light">{position ? position : ""}</h3>
         </div>
       </motion.div>
     </motion.div>
   )
-  }
 
- return <div/>
+//  return <div/>
    
 };
 

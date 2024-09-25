@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && next start",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && next build",
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -27,6 +27,8 @@
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "postcss": "^8.3.9",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^2.2.16",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
   }
 }
